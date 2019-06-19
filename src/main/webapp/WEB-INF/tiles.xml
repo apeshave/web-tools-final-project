@@ -1,0 +1,213 @@
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/layout/mainlayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="new.definition" template="/WEB-INF/layout/newlayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="menu" value="" />
+	</definition>
+
+	<definition name="choice" extends="new.definition">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/WEB-INF/views/choice.jsp" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="right" value="" />
+	</definition>
+
+	<definition name="logout" extends="new.definition">
+		<put-attribute name="title" value="Logging out.." />
+		<put-attribute name="body" value="/WEB-INF/views/logout.jsp" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="right" value="" />
+	</definition>
+	
+	
+	<definition name="inbox" extends="new.definition">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/WEB-INF/views/doctor/inbox.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/doctor/home.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+
+	<definition name="home.layout" template="/WEB-INF/layout/homelayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="right" value="" />
+	</definition>
+
+	<definition name="base.definition2" template="/WEB-INF/layout/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="menu" value="/WEB-INF/views/menu.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="login" extends="base.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+	
+	<definition name="failed" extends="base.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/views/failed.jsp" />
+	</definition>
+	
+	<definition name="thanks" extends="base.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/views/thanks.jsp" />
+	</definition>
+	
+	<definition name="verify" extends="base.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/views/verify.jsp" />
+	</definition>
+	
+
+	<definition name="redirect" extends="base.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/views/redirect.jsp" />
+	</definition>
+
+	<definition name="manufacturerSignup" extends="base.definition">
+		<put-attribute name="title" value="New User Sign Up Form" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/manufacturerSignup.jsp" />
+		<put-attribute name="countries" value="/WEB-INF/views/countries.jsp" />
+	</definition>
+
+	<definition name="doctorSignup" extends="base.definition">
+		<put-attribute name="title" value="New User Sign Up Form" />
+		<put-attribute name="body" value="/WEB-INF/views/doctorSignup.jsp" />
+		<put-attribute name="countries" value="/WEB-INF/views/countries.jsp" />
+	</definition>
+
+	<definition name="nurseSignup" extends="base.definition">
+		<put-attribute name="title" value="New User Sign Up Form" />
+		<put-attribute name="body" value="/WEB-INF/views/nurseSignup.jsp" />
+		<put-attribute name="countries" value="/WEB-INF/views/countries.jsp" />
+	</definition>
+
+	<definition name="confirm" extends="base.definition">
+		<put-attribute name="title" value="Confirm the Details" />
+		<put-attribute name="body" value="/WEB-INF/views/confirm.jsp" />
+	</definition>
+
+	<definition name="save" extends="base.definition">
+		<put-attribute name="title" value="User Added" />
+		<put-attribute name="body" value="/WEB-INF/views/save.jsp" />
+	</definition>
+
+	<definition name="profile" extends="base.definition">
+		<put-attribute name="title" value="My profile" />
+		<put-attribute name="body" value="/WEB-INF/views/profile.jsp" />
+	</definition>
+
+	<!-- Best layout to use -->
+	<definition name="inbox" extends="home.layout">
+		<put-attribute name="title" value="Inbox" />
+		<put-attribute name="menu" value="/WEB-INF/views/doctor/menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/doctor/inbox.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+
+	<definition name="inventory" extends="home.layout">
+		<put-attribute name="title" value="Inbox" />
+		<put-attribute name="menu" value="/WEB-INF/views/doctor/menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/doctor/inventory.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+
+	<definition name="doctorHome" extends="home.layout">
+		<put-attribute name="title" value="Welcome Doctor" />
+		<put-attribute name="menu" value="/WEB-INF/views/doctor/menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/doctor/home.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+
+	<definition name="nurseHome" extends="home.layout">
+		<put-attribute name="title" value="Welcome Nurse" />
+		<put-attribute name="menu" value="/WEB-INF/views/nurse/menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/nurse/home.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+
+	<definition name="return" extends="home.layout">
+		<put-attribute name="title" value="Welcome Nurse" />
+		<put-attribute name="menu" value="/WEB-INF/views/nurse/menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/nurse/return.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+	
+	
+	<definition name="newRequest" extends="home.layout">
+		<put-attribute name="title" value="Nurse Request Form" />
+		<put-attribute name="menu" value="/WEB-INF/views/nurse/menu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/nurse/newRequest.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+
+	<definition name="reviewRequest" extends="home.layout">
+		<put-attribute name="title" value="Review Request Form" />
+		<put-attribute name="menu" value="/WEB-INF/views/nurse/menu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/nurse/reviewRequest.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+
+	<!-- -->
+
+	<definition name="manufacturerHome" extends="home.layout">
+		<put-attribute name="title" value="Welcome Manufacturer" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/manufacturer/menu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/manufacturer/home.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+
+	<definition name="addProduct" extends="home.layout">
+		<put-attribute name="title" value="Welcome Manufacturer" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/manufacturer/menu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/manufacturer/addProduct.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+
+	<definition name="manageRequests" extends="home.layout">
+		<put-attribute name="title" value="Welcome Manufacturer" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/manufacturer/menu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/manufacturer/manageRequests.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+
+	<definition name="manageInventory" extends="home.layout">
+		<put-attribute name="title" value="Welcome Manufacturer" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/manufacturer/menu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/manufacturer/manageInventory.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+
+	<definition name="doctorRequest" extends="home.layout">
+		<put-attribute name="menu" value="/WEB-INF/views/doctor/menu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/doctor/doctorRequest.jsp" />
+		<put-attribute name="right" value="/WEB-INF/views/news.jsp" />
+	</definition>
+
+	<definition name="done" extends="home.layout">
+		<put-attribute name="body" value="/WEB-INF/views/relogin.jsp" />
+		<put-attribute name="right" value="" />
+		<put-attribute name="menu" value="" />
+	</definition>
+</tiles-definitions>
